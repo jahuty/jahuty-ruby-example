@@ -24,10 +24,10 @@ Verify you have Rails 5.2.4 installed:
 $ rails -v
 ```
 
-The command above should produce the following output:
+The command above should produce the following output (where the major number is the most important):
 
 ```bash
-Rails 5.2.4.1
+Rails 6...
 ```
 
 Verify you have Bundler 2.0+ installed:
@@ -93,7 +93,7 @@ This should produce output similar to the following:
 ```bash
 ~/jahuty-ruby-example $ rails s
 => Booting Puma
-=> Rails 5.2.4.1 application starting in development
+=> Rails 6.0.2.2 application starting in development
 => Run `rails server -h` for more startup options
 Puma starting in single mode...
 * Version 3.12.4 (ruby 2.6.4-p104), codename: Llamas in Pajamas
