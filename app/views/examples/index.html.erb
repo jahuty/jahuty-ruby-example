@@ -1,6 +1,11 @@
+<%
+  jahuty = Jahuty::Client.new(
+    api_key: 'kn2Kj5ijmT2pH6ZKqAQyNexUqKeRM4VG6DDgWN1lIcc'
+  )
+%>
 <h1>
   Welcome to Jahuty!
 </h1>
 <p>
-  <%= Jahuty::Snippet.render 1 %>
+  <%== jahuty.snippets.render 1 %>
 </p>
