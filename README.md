@@ -116,33 +116,31 @@ Navigate to `http://localhost:3000/examples`, and you should see the following:
 
 ![Jahuty example](https://github.com/jahuty/jahuty-ruby-example/blob/master/app/assets/images/example.png)
 
-In this example, we're retrieving the "default" snippet (i.e., the snippet we control for system tests).
-
-- We initialized our [Ruby SDK](https://github.com/jahuty/jahuty-ruby) with our (public) [API key](https://www.jahuty.com/docs/api#authentication) in `config/initializers/jahuty.rb`; and,
-- We used the SDK to retrieve the snippet with an `id` of 1 in `app/views/examples/index.html.erb`.
+In this example, we're rendering the "default" snippet (i.e., the snippet we use for system tests). We initialized our [client](https://github.com/jahuty/jahuty-ruby) with our (public) [API key](https://docs.jahuty.com/api#authentication) and used the SDK to retrieve the snippet with an `id` of 1 in `app/views/examples/index.html.erb`.
 
 ## Customizing the example
 
 Ready to use your own snippet?
 
-If you haven't already, [sign up](https://www.jahuty.com/users/sign_up), confirm your email address, [create your organization](https://www.jahuty.com/docs/creating-an-organization), and [create a snippet](https://www.jahuty.com/docs/creating-a-snippet).
+If you haven't already, [sign up](https://www.jahuty.com/users/sign_up). We'll provision your account with an organization, an API key, and a welcome snippet.
 
-Replace the default API key in `config/initializers/jahuty.rb` with your [organization's API key](https://www.jahuty.com/docs/managing-an-api-key):
-
-```ruby
-# config/initializers/jahuty.rb
-Jahuty.key = "YOUR_API_KEY"
-```
-
-Replace the snippet `id` in `app/views/examples/index.html.erb` with your snippet's `id`. You can find a snippet's `id` beside its name in [your snippet Dashboard](https://www.jahuty.com/users/sign_in):
+Replace the default API key in `app/views/examples/index.html.erb` with the temporary API key we included in your welcome email:
 
 ```ruby
 # app/views/examples/index.html.erb
-<%= Jahuty::Snippet.get YOUR_SNIPPET_ID %>
+jahuty = Jahuty::Client.new(api_key: 'YOUR_API_KEY')
+```
+
+And, replace the snippet `id` in the same file with your snippet's `id`. You can find a snippet's `id` beside its name:
+
+```html+erb
+<p>
+  <%== jahuty.snippets.render YOUR_SNIPPET_ID %>
+</p>
 ```
 
 Refresh the page, and you should see your snippet's content in the document!
 
-If you have questions, try [our documentation](https://www.jahuty.com/docs) or feel free too [ask us a question](https://www.jahuty.com/contacts/new).
+If you have questions, try [our documentation](https://docs.jahuty.com) or feel free too [ask us a question](https://www.jahuty.com/contact).
 
-We hope you enjoy using [Jahuty](https://www.jahuty.com) to stop worrying about content changes, and we're excited to partner with you!
+We hope you enjoy using [Jahuty](https://www.jahuty.com) to insert managed content anywhere, and we're excited to partner with you!
