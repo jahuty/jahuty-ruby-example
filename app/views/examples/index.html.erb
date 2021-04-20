@@ -1,11 +1,66 @@
-<%
-  jahuty = Jahuty::Client.new(
-    api_key: 'kn2Kj5ijmT2pH6ZKqAQyNexUqKeRM4VG6DDgWN1lIcc'
-  )
-%>
-<h1>
-  Welcome to Jahuty!
-</h1>
-<p>
-  <%== jahuty.snippets.render 1 %>
+<p class="lead">
+  Welcome to our Ruby example application using Rails!
 </p>
+<p>
+  This application includes the following examples:
+</p>
+<ul>
+  <li>
+    <%= link_to 'Rendering a snippet', snippet_path %>
+  </li>
+  <li>
+    <%= link_to 'Rendering a snippet from cache', snippet_from_cache_path %>
+  </li>
+  <li>
+    <%= link_to 'Rendering a snippet with params', snippet_with_params_path %>
+  </li>
+  <li>
+    <%= link_to 'Rendering snippets', snippets_path %>
+  </li>
+  <li>
+    <%= link_to 'Rendering snippets from cache', snippets_from_cache_path %>
+  </li>
+  <li>
+    <%= link_to 'Rendering snippets with params', snippets_with_params_path %>
+  </li>
+</ul>
+<p>
+  These examples utilize our "system test" setup:
+</p>
+<ul>
+  <li>
+    The "system test" <a href="https://docs.jahuty.com/components/organizations" target="_blank">organization</a> exists in Jahuty with an <a href="https://docs.jahuty.com/components/api-keys" target="_blank">API key</a>.
+  </li>
+  <li>
+    The organization has two <a href="https://docs.jahuty.com/components/snippets" target="_blank">snippets</a>, <code>1</code>, a static phrase, and <code>62</code>, which expects two <a href="https://docs.jahuty.com/liquid/introduction" target="_blank">variables</a>: <code>foo</code> and <code>bar</code>.
+  </li>
+  <li>
+    The organiation has a <a href="https://docs.jahuty.com/components/tags" target="_blank">tag</a>, <code>test</code>, which has been applied to both snippets.
+  </li>
+</ul>
+<p>
+  These examples use the following changes to a standard Rails installation:
+</p>
+<ol>
+    <li>
+      We added an <code>Singleton</code> initializer to <code>config/initializers/jahuty.rb</code>.
+    </li>
+    <li>
+      We created a <code>jahuty</code> helper method in <code>app/controllers/application_controller.rb</code>.
+    </li>
+    <li>
+      We added routes for our examples in <code>config/routes.rb</code>.
+    </li>
+    <li>
+      We created an empty <code>app/controllers/examples_controller.rb</code>.
+    </li>
+    <li>
+      We created a default layout in <code>app/views/layouts/application.html.erb</code>.
+    </li>
+    <li>
+      We created views for each example in <code>app/views/examples</code>.
+    </li>
+    <li>
+      We added routing, request, and system tests in <code>spec/*</code>.
+    </li>
+</ol>

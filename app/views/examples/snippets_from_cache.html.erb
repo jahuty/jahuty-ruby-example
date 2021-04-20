@@ -1,0 +1,14 @@
+<%
+  # Warm the in-memory cache, and subsequent calls to render a snippet
+  # in the collection with the same parameters (none, in this case) will use
+  # the cached value.
+  jahuty.snippets.all_renders 'test'
+%>
+
+<%== jahuty.snippets.render 1 %>
+
+<%==
+  # Keep in mind, this snippet expects two variables, `foo` and `bar` which have
+  # not been passed, causing Jahuty to render "" in their place.
+  jahuty.snippets.render 62
+%>

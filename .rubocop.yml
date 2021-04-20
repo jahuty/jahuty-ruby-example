@@ -1,0 +1,27 @@
+require:
+   - rubocop-performance
+   - rubocop-rails
+   - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - db/**/*
+    - bin/**/*
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+Metrics/BlockLength:
+  Exclude:
+    - config/**/*
+    - spec/**/*
+    - lib/tasks/**/*
+RSpec/DescribeClass:
+  Exclude:
+    # These specs do not describe classes or modules.
+    - spec/requests/**/*
+    - spec/routing/**/*
+    - spec/system/**/*
+Style/Documentation:
+  # We add top-level comments when needed.
+  Enabled: false

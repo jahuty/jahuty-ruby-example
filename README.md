@@ -6,7 +6,7 @@ An example Rails application with [Jahuty's Ruby SDK](https://github.com/jahuty/
 
 Before you get started, let's make sure you have the correct version of Ruby, Rails, and Bundler.
 
-Verify you have Ruby 2.6.4 installed:
+Verify you have Ruby 2.7.2 installed:
 
 ```bash
 $ ruby -v
@@ -15,10 +15,10 @@ $ ruby -v
 The command above should produce the following output:
 
 ```bash
-ruby 2.6.4...
+ruby 2.7.2...
 ```
 
-Verify you have Rails 5.2.4 installed:
+Verify you have Rails 6+ installed:
 
 ```bash
 $ rails -v
@@ -116,30 +116,20 @@ Navigate to `http://localhost:3000/examples`, and you should see the following:
 
 ![Jahuty example](https://github.com/jahuty/jahuty-ruby-example/blob/master/app/assets/images/example.png)
 
-In this example, we're rendering the "default" snippet (i.e., the snippet we use for system tests). We initialized our [client](https://github.com/jahuty/jahuty-ruby) with our (public) [API key](https://docs.jahuty.com/api#authentication) and used the SDK to retrieve the snippet with an `id` of 1 in `app/views/examples/index.html.erb`.
-
 ## Customizing the example
 
-Ready to use your own snippet?
+Our examples use snippets that we control. Of course, it's more fun if you use your own.
 
-If you haven't already, [sign up](https://www.jahuty.com/users/sign_up). We'll provision your account with an organization, an API key, and a welcome snippet.
+If you haven't already, [sign up](https://app.jahuty.com/sign-up), and we'll provision your account with an organization, an API key, and a welcome snippet.
 
-Replace the default API key in `app/views/examples/index.html.erb` with the temporary API key we included in your welcome email:
+Then, to use your snippets in the examples:
 
-```ruby
-# app/views/examples/index.html.erb
-jahuty = Jahuty::Client.new(api_key: 'YOUR_API_KEY')
-```
-
-And, replace the snippet `id` in the same file with your snippet's `id`. You can find a snippet's `id` beside its name:
-
-```html+erb
-<p>
-  <%== jahuty.snippets.render YOUR_SNIPPET_ID %>
-</p>
-```
+1. _Change the API key._ Open `config/initializers/jahuty.rb` and replace our API key with yours.
+1. _Change the snippet id._ Open `resources/views/examples/snippet.html.erb` and replace our snippet `id` with yours.
 
 Refresh the page, and you should see your snippet's content in the document!
+
+## That's it!
 
 If you have questions, try [our documentation](https://docs.jahuty.com) or feel free too [ask us a question](https://www.jahuty.com/contact).
 
