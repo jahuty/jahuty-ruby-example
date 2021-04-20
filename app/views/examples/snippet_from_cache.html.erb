@@ -1,0 +1,9 @@
+<%
+  # Warm the in-memory cache, and subsequent renders of the same snippet with
+  # the same params will use the cached value.
+  jahuty.snippets.render 1
+%>
+
+<%== jahuty.snippets.render 1 %>
+
+<%== jahuty.snippets.render 1 %>

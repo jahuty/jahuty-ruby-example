@@ -1,0 +1,9 @@
+<% renders = jahuty.snippets.all_renders 'test' %>
+
+<%== renders[0] %>
+
+<%==
+  # Keep in mind, this snippet expects two variables, `foo` and `bar` which have
+  # not been passed, causing Jahuty to render "" in their place.
+  renders[1]
+%>

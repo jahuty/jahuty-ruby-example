@@ -1,0 +1,16 @@
+<%
+  # Note the slightly different syntax for the "params" option here: the params
+  # are indexed by snippet id, and the special "*" key is used to pass params to
+  # all snippets in the collection.
+  jahuty.snippets.all_renders 'test', params: {
+    '*' => { foo: 'foo' },
+    62  => { bar: 'bar' }
+  }
+%>
+
+<%== jahuty.snippets.render 1 %>
+
+<%==
+  # Render the snippet cache with the same effective parameters to hit the cache.
+  jahuty.snippets.render 62, params: { foo: 'foo', bar: 'bar' }
+%>
