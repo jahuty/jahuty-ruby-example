@@ -64,9 +64,9 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
-  Capybara.configure do |config|
-    config.default_max_wait_time = 10 # seconds
-    config.server                = :puma, { Silent: true }
+  Capybara.configure do |c|
+    c.default_max_wait_time = 10 # seconds
+    c.server                = :puma, { Silent: true }
   end
 
   config.before(:each, type: :system) do
