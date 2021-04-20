@@ -6,7 +6,7 @@ An example Rails application with [Jahuty's Ruby SDK](https://github.com/jahuty/
 
 Before you get started, let's make sure you have the correct version of Ruby, Rails, and Bundler.
 
-Verify you have Ruby 2.6.4 installed:
+Verify you have Ruby 2.7.2 installed:
 
 ```bash
 $ ruby -v
@@ -15,10 +15,10 @@ $ ruby -v
 The command above should produce the following output:
 
 ```bash
-ruby 2.6.4...
+ruby 2.7.2...
 ```
 
-Verify you have Rails 5.2.4 installed:
+Verify you have Rails 6+ installed:
 
 ```bash
 $ rails -v
