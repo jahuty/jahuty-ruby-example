@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe ExamplesController do
+RSpec.describe 'examples' do
   describe 'GET index' do
     before { get examples_path }
 

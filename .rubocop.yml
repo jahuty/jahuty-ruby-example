@@ -1,7 +1,7 @@
-# require:
-#    - rubocop-performance
-#    - rubocop-rails
-#    - rubocop-rspec
+require:
+   - rubocop-performance
+   - rubocop-rails
+   - rubocop-rspec
 
 AllCops:
   NewCops: enable
@@ -16,12 +16,12 @@ Metrics/BlockLength:
     - config/**/*
     - spec/**/*
     - lib/tasks/**/*
-# RSpec/DescribeClass:
-#   Exclude:
-#     # These specs do not describe classes or modules.
-#     - spec/requests/**/*
-#     - spec/routing/**/*
-#     - spec/system/**/*
+RSpec/DescribeClass:
+  Exclude:
+    # These specs do not describe classes or modules.
+    - spec/requests/**/*
+    - spec/routing/**/*
+    - spec/system/**/*
 Style/Documentation:
   # We add top-level comments when needed.
   Enabled: false
