@@ -6,7 +6,7 @@ An example Rails application with [Jahuty's Ruby SDK](https://github.com/jahuty/
 
 Before you get started, let's make sure you have the correct version of Ruby, Rails, and Bundler.
 
-Verify you have Ruby 2.7.2 installed:
+Verify you have Ruby 2.7.3 installed:
 
 ```bash
 $ ruby -v
