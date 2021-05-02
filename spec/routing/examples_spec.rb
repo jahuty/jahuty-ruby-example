@@ -19,8 +19,8 @@ RSpec.describe 'example routes' do
     expect(get: '/examples/snippet-with-params').to be_routable
   end
 
-  it 'routes :snippets-with-latest' do
-    expect(get: '/examples/snippets-with-latest').to be_routable
+  it 'routes :snippet-with-latest' do
+    expect(get: '/examples/snippet-with-latest').to be_routable
   end
 
   it 'routes :snippets' do
