@@ -1,5 +1,7 @@
 # jahuty-ruby-example
 
+[![CircleCI](https://circleci.com/gh/jahuty/jahuty-ruby-example.svg?style=svg)](https://circleci.com/gh/jahuty/jahuty-ruby-example)
+
 An example Rails application with [Jahuty's Ruby SDK](https://github.com/jahuty/jahuty-ruby).
 
 ## Checking your environment
