@@ -7,8 +7,10 @@ Rails.application.routes.draw do
     get 'snippet'
     get 'snippet-with-params'
     get 'snippet-from-cache'
+    get 'snippet-with-latest'
     get 'snippets'
     get 'snippets-with-params'
     get 'snippets-from-cache'
+    get 'snippets-with-latest'
   end
 end

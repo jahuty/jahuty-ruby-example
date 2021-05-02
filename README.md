@@ -1,5 +1,7 @@
 # jahuty-ruby-example
 
+[![CircleCI](https://circleci.com/gh/jahuty/jahuty-ruby-example.svg?style=svg)](https://circleci.com/gh/jahuty/jahuty-ruby-example)
+
 An example Rails application with [Jahuty's Ruby SDK](https://github.com/jahuty/jahuty-ruby).
 
 ## Checking your environment
@@ -76,7 +78,27 @@ Now, you need to install the application's dependencies (aka, "gems") using bund
 
 This will print a bunch of output to your screen as Bundler installs the application's dependencies.
 
-When it's done (and it may take a few minutes), you're ready to start the application!
+When it's done (and it may take a few minutes), you're ready to test the application.
+
+## Testing the application
+
+Before you start the application, it's a good idea to run tests and verify it installed correctly:
+
+```bash
+~/jahuty-ruby-example $ bundle exec rspec
+```
+
+This should print something similar to the following to your screen:
+
+```bash
+Randomized with seed X
+....................................
+
+Finished in Y seconds (files took Z seconds to load)
+ZZ examples, 0 failures
+```
+
+If not, fix any issues. Otherwise, you are ready to start the application!
 
 ## Starting the application
 

@@ -2,8 +2,8 @@
 
 require 'rails_helper'
 
-RSpec.describe 'user views snippets with params' do
-  before { visit snippets_with_params_path }
+RSpec.describe 'user views snippets with latest' do
+  before { visit snippets_with_latest_path }
 
   it 'has link home' do
     expect(page).to have_link(nil, href: examples_path)
@@ -14,6 +14,10 @@ RSpec.describe 'user views snippets with params' do
   end
 
   it 'has content from snippet 62' do
-    expect(page).to have_content('This foo is bar.')
+    expect(page).to have_content('This is ')
+  end
+
+  it 'has content from snippet 102' do
+    expect(page).to have_content('This content is latest')
   end
 end

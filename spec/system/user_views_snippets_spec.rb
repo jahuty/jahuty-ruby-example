@@ -13,7 +13,11 @@ RSpec.describe 'user views snippets' do
     expect(page).to have_content('This is my first snippet!')
   end
 
-  it 'has content from snippet 2' do
+  it 'has content from snippet 62' do
     expect(page).to have_content('This is .')
+  end
+
+  it 'has content from snippet 102' do
+    expect(page).to have_content('This content is published')
   end
 end
